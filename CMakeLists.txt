@@ -33,4 +33,10 @@ add_executable(prograTeo main.cpp
         3-Libreria_Estandard/src/p8.h
         3-Libreria_Estandard/src/p9.h
         4-Adaptadores/src/P1.h
-        4-Adaptadores/src/P2.h)
+        4-Adaptadores/src/P2.h
+        4-Adaptadores/src/P1.cpp
+        4-Adaptadores/src/P2.cpp
+        4-Adaptadores/src/P3.cpp
+        4-Adaptadores/src/P4.cpp
+        4-Adaptadores/src/P5.cpp
+        4-Adaptadores/src/P6.cpp)
