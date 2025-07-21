@@ -3,4 +3,5 @@ project(prograTeo)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(prograTeo main.cpp)
+add_executable(prograTeo main.cpp
+        1-Fundamentos/src/bag.h)
