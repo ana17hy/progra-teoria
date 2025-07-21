@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include "P5.h"
 #include <stack>
@@ -10,7 +11,7 @@ void question_5(){
 
 bool is_equation_balanced(std::string source) {
     std::stack<char> st;
-    
+
     for (char c : source) {
         if (c == '(' || c == '[' || c == '{') {
             st.push(c);
@@ -25,6 +26,6 @@ bool is_equation_balanced(std::string source) {
             st.pop();
         }
     }
-    
+
     return st.empty();
 }

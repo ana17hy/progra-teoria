@@ -6,34 +6,33 @@
 #define POO2_UNIT6_ADAPTADORES_POO_V2021_2_P1_H
 
 #include <stack>
+using namespace std;
 
-void question_1();
+template<typename T>
+stack<T> merge_stacks(stack<T> a, stack<T> b) {
 
-template <typename T>
-std::stack<T> merge_stacks(std::stack<T> a, std::stack<T> b) {
-    std::stack<T> temp;
-    std::stack<T> result;
-    bool turn = true;
-    
+    stack<T> aux;
     while (!a.empty() || !b.empty()) {
-        if (turn && !b.empty()) {
-            temp.push(b.top());
+        if (!b.empty()) {
+            aux.push(b.top());
             b.pop();
-        } else if (!turn && !a.empty()) {
-            temp.push(a.top());
+        }
+        if (!a.empty()) {
+            aux.push(a.top());
             a.pop();
         }
-        turn = !turn;
-        if (a.empty() && !b.empty()) turn = true;
-        if (b.empty() && !a.empty()) turn = false;
     }
-    
-    while (!temp.empty()) {
-        result.push(temp.top());
-        temp.pop();
+
+
+    stack<T> result;
+    while (!aux.empty()) {
+        result.push(aux.top());
+        aux.pop();
     }
-    
+
     return result;
 }
+
+void question_1();
 
 #endif //POO2_UNIT6_ADAPTADORES_POO_V2021_2_P1_H
